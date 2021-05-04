@@ -1,0 +1,96 @@
+#studio{
+
+    @include md{
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". studio .";
+    }
+
+    @include xl{
+        grid-template-columns: auto 1200px auto;
+    } 
+
+    >div{
+        @include md{
+            grid-area: studio;
+        }
+
+        ul{
+
+            @include md{ 
+                display: grid;
+                grid-template-columns: repeat (4 1fr);
+                grid-template-areas: 
+                "studio1 studio1 studio2 studio2"
+                "studio3 studio3 studio4 studio4"
+                ". studio5 .";
+                gap: 16px
+            }
+
+            @include lg{ 
+                display: grid;
+                grid-template-columns: repeat (6 1fr);
+                grid-template-areas: 
+                "studio1 studio1 studio2 studio2 studio3 studio3"
+                ". studio4 studio4 studio5 studio5";
+                gap: 16px
+            }
+
+            li{
+                background-color: $brightteal; 
+                color: $night;
+                img{
+                    width: 100%
+                }
+
+                section {
+                    display: grid;
+                    grid-template-columns: 16px auto 16px;
+                    grid-template-areas: ". studio-content .";
+
+                    >div{
+                        grid-area: studio-content;
+                    }
+
+                }
+            }
+
+            #studio1{
+                @include md{
+                    grid-area: studio1;
+                }
+                
+            }
+
+            #studio2{
+                @include md{
+                    grid-area: studio2;
+                }
+                
+            }
+
+            #studio3{
+                @include md{
+                    grid-area: studio3;
+                }
+                
+            }
+
+            #studio4{
+                @include md{
+                    grid-area: studio4;
+                }
+                
+            }
+
+            #studio5{
+                @include md{
+                    grid-area: studio5;
+                }
+                
+            }
+        }
+    }
+}
+    
+   

@@ -1,0 +1,48 @@
+footer{
+
+    background-color: $night;
+    color: $dullteal;
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". footer .";
+    
+
+    @include xl{
+        grid-template-columns: auto 1200px auto 
+    }
+
+    >div{
+        grid-area: footer;
+
+        @include md{
+            display: grid;
+            grid-template-columns: 50% auto;
+            grid-template-areas: 
+            "come-to-the-studio get-more-information"
+            "follow-us";
+        }
+
+        @include xl{ 
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            "come-to-the-studio get-more-information follow-us";
+        }
+
+        section{ 
+
+            #cometothestudio{
+                @include md{
+                    grid-area: come-to-the-studio 
+                }
+            }
+    
+            #getmoreinformation{
+                @include md{
+                    grid-area: get-more-information
+                }
+            }
+
+        }
+        
+    }
+} 

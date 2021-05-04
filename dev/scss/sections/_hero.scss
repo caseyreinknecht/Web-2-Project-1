@@ -1,0 +1,42 @@
+#hero{ 
+    img{
+        width: 100%;
+    }
+
+    ul{
+
+        @include md{
+            display:grid;
+            grid-template-columns: 40% auto;
+        }
+
+        @include lg{
+            grid-template-columns: 50% auto;
+        }
+        li{
+            display: grid;
+            grid-template-columns: 16px auto 16px;
+            grid-template-areas: ". hero-content .";
+
+            @include xl{
+                grid-template-columns: auto 480px 16px;
+            }
+            a{
+                grid-area: hero-content; 
+            }
+
+            #hero1{
+                background-color: $brightteal;
+                color: $white;
+            }
+
+            #hero2{
+                background-color: $dullteal;
+                color: $white;
+                @include xl{
+                grid-template-columns: 16px 480px auto; 
+            } 
+        }   
+    }
+}   
+} 

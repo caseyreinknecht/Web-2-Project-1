@@ -1,0 +1,62 @@
+/* =============
+    Images
+============= */
+
+#images{
+
+    @include xl{
+        display: grid;
+        grid-template-columns: auto 1200px auto;
+
+        grid-template-areas: ". images .";
+    }
+    
+    ul{ 
+        display: grid;
+
+        @include md{
+            grid-template-columns: 50% auto;
+        }
+
+        @include lg{ 
+            grid-template-columns: 60% auto;
+        }
+
+        @include xl{
+            grid-area: images; 
+            grid-template-columns: 65% auto;
+            grid-template-areas: 
+            "images-1, images-2"
+            "images-1, images-3";
+        }
+
+        li{
+            img{
+                width: 100% 
+            }
+        }
+
+        #images-1{
+
+            @include xl{
+                grid-area: images-1;
+            }
+        }
+
+        #images-2{
+
+            @include xl{
+                grid-area: images-2;
+            }
+        }
+
+        #images-3{
+            display: none;
+
+            @include xl{
+                display: list-item;
+                grid-area: images-3;
+            }
+        } 
+    }
+} 

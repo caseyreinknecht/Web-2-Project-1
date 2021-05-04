@@ -1,0 +1,26 @@
+/* =============
+    Search
+============= */
+#search{
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". search .";
+    background-color: $white; 
+
+    @include xl{
+        grid-template-columns: auto 1000px auto;
+    }
+
+    >div{
+        grid-area: search;
+        color: $night;
+       
+        input{ 
+
+         
+             button{
+                background-color: $dullteal;
+            }
+        }
+    }
+} 

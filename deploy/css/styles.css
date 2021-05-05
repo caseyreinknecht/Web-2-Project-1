@@ -503,40 +503,41 @@ footer > div {
 }
 
 #hero img {
+  object-fit: cover;
   width: 100%;
 }
 @media (min-width: 768px) {
-  #hero ul {
+  #hero section ul {
     display: grid;
     grid-template-columns: 40% auto;
   }
 }
 @media (min-width: 992px) {
-  #hero ul {
+  #hero section ul {
     grid-template-columns: 50% auto;
   }
 }
-#hero ul li {
+#hero section ul li {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". hero-content .";
 }
 @media (min-width: 1200px) {
-  #hero ul li {
+  #hero section ul li {
     grid-template-columns: auto 480px 16px;
   }
 }
-#hero ul li a {
+#hero section ul li a {
   grid-area: hero-content;
 }
-#hero ul li #hero1 {
+#hero section ul li #hero1 {
   background-color: #5AC0BE;
 }
-#hero ul li #hero2 {
+#hero section ul li #hero2 {
   background-color: #91C1C0;
 }
 @media (min-width: 1200px) {
-  #hero ul li #hero2 {
+  #hero section ul li #hero2 {
     grid-template-columns: 16px 480px auto;
   }
 }

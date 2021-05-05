@@ -1,41 +1,50 @@
 #hero{ 
+
     img{
+        object-fit: cover;
         width: 100%;
     }
 
-    ul{
+    section{
 
-        @include md{
-            display:grid;
-            grid-template-columns: 40% auto;
-        }
-
-        @include lg{
-            grid-template-columns: 50% auto;
-        }
-        li{
-            display: grid;
-            grid-template-columns: 16px auto 16px;
-            grid-template-areas: ". hero-content .";
-
-            @include xl{
-                grid-template-columns: auto 480px 16px;
+        ul{
+            @include md{
+                display:grid;
+                grid-template-columns: 40% auto;
             }
-            a{
-                grid-area: hero-content; 
+    
+            @include lg{
+                grid-template-columns: 50% auto;
             }
-
-            #hero1{
-                background-color: $brightteal;
-                
-            }
-
-            #hero2{
-                background-color: $dullteal;
+    
+            li{
+                display: grid;
+                grid-template-columns: 16px auto 16px;
+                grid-template-areas: ". hero-content .";
+    
                 @include xl{
-                grid-template-columns: 16px 480px auto; 
-            } 
-        }   
+                    grid-template-columns: auto 480px 16px;
+                }
+    
+                a{
+                    grid-area: hero-content; 
+                }
+    
+                #hero1{
+                    background-color: $brightteal;
+                    
+                }
+    
+                #hero2{
+                    background-color: $dullteal;
+                    @include xl{
+                    grid-template-columns: 16px 480px auto; 
+                } 
+            }   
+        }
+    }  
+
     }
-}   
-} 
+
+    
+}  

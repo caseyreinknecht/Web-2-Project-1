@@ -27,12 +27,11 @@
 
             #hero1{
                 background-color: $brightteal;
-                color: $white;
+                
             }
 
             #hero2{
                 background-color: $dullteal;
-                color: $white;
                 @include xl{
                 grid-template-columns: 16px 480px auto; 
             } 

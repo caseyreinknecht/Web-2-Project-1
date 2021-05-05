@@ -531,11 +531,9 @@ footer > div {
 }
 #hero ul li #hero1 {
   background-color: #5AC0BE;
-  color: #fff;
 }
 #hero ul li #hero2 {
   background-color: #91C1C0;
-  color: #fff;
 }
 @media (min-width: 1200px) {
   #hero ul li #hero2 {

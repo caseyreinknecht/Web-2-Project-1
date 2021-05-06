@@ -9,30 +9,38 @@
     
     ul{ 
         display: grid;
+        grid-template-rows: 360px 486px; 
 
         @include md{
             grid-template-columns: 50% auto;
+            grid-template-rows: 625px;
         }
 
         @include lg{ 
             grid-template-columns: 60% auto;
+            
         }
 
         @include xl{
             grid-area: images; 
             grid-template-columns: 65% auto;
+            grid-template-rows: 377px 377px;
             grid-template-areas: 
             "images-1, images-2"
             "images-1, images-3";
         }
 
         li{
-            img{
-                width: 100% 
-            }
-        }
+            background-size: cover;
+            background-position: center;
+            
+            // img{
+            //     width: 100% 
+            // }
+        } 
 
         #images-1{
+            background-image: url("../img/images/images1.jpg"); 
 
             @include xl{
                 grid-area: images-1;
@@ -40,6 +48,15 @@
         }
 
         #images-2{
+            background-image: url("../img/images/images2.jpg"); 
+
+            @include md{
+                background-position: center bottom; 
+            }
+
+            @include lg{
+                background-position: center; 
+            }
 
             @include xl{
                 grid-area: images-2;
@@ -47,6 +64,7 @@
         }
 
         #images-3{
+            background-image: url("../img/images/images3.jpg"); 
             display: none;
 
             @include xl{

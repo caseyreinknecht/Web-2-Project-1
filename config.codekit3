@@ -112,48 +112,9 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/deploy\/img\/studio\/studio1.jpg" : {
-      "ft" : 16384,
-      "iS" : 1655263,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/deploy\/img\/studio\/studio1.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/deploy\/img\/studio\/studio2.jpg" : {
-      "ft" : 16384,
-      "iS" : 1638569,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/deploy\/img\/studio\/studio2.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/deploy\/img\/studio\/studio3.jpg" : {
-      "ft" : 16384,
-      "iS" : 1177422,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/deploy\/img\/studio\/studio3.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/deploy\/img\/studio\/studio4.jpg" : {
       "ft" : 16384,
-      "iS" : 1084056,
+      "iS" : 29542,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/deploy\/img\/studio\/studio4.jpg",
@@ -166,7 +127,7 @@
     },
     "\/deploy\/img\/studio\/studio5.jpg" : {
       "ft" : 16384,
-      "iS" : 2588083,
+      "iS" : 53357,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/deploy\/img\/studio\/studio5.jpg",

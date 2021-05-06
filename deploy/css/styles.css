@@ -456,7 +456,7 @@ footer > div {
     grid-template-areas: "come information" "come follow-us";
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   footer > div {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "come follow-us";
@@ -572,6 +572,20 @@ footer > div {
 #join ul li div {
   grid-area: join-content;
 }
+#join ul li div aside div {
+  background-position: center;
+  background-size: cover;
+  border: 4px #fff solid;
+  height: 85px;
+  width: 85px;
+  border-radius: 100%;
+}
+#join ul li div aside #join1 {
+  background-image: url("../img/join/join1.jpg");
+}
+#join ul li div aside #join2 {
+  background-image: url("../img/join/join2.jpg");
+}
 
 @media (min-width: 1200px) {
   #images {
@@ -582,10 +596,12 @@ footer > div {
 }
 #images ul {
   display: grid;
+  grid-template-rows: 360px 486px;
 }
 @media (min-width: 768px) {
   #images ul {
     grid-template-columns: 50% auto;
+    grid-template-rows: 625px;
   }
 }
 @media (min-width: 992px) {
@@ -597,15 +613,33 @@ footer > div {
   #images ul {
     grid-area: images;
     grid-template-columns: 65% auto;
+    grid-template-rows: 377px 377px;
     grid-template-areas: "images-1, images-2" "images-1, images-3";
   }
 }
-#images ul li img {
-  width: 100%;
+#images ul li {
+  background-size: cover;
+  background-position: center;
+}
+#images ul #images-1 {
+  background-image: url("../img/images/images1.jpg");
 }
 @media (min-width: 1200px) {
   #images ul #images-1 {
     grid-area: images-1;
+  }
+}
+#images ul #images-2 {
+  background-image: url("../img/images/images2.jpg");
+}
+@media (min-width: 768px) {
+  #images ul #images-2 {
+    background-position: center bottom;
+  }
+}
+@media (min-width: 992px) {
+  #images ul #images-2 {
+    background-position: center;
   }
 }
 @media (min-width: 1200px) {
@@ -614,6 +648,7 @@ footer > div {
   }
 }
 #images ul #images-3 {
+  background-image: url("../img/images/images3.jpg");
   display: none;
 }
 @media (min-width: 1200px) {
@@ -643,7 +678,7 @@ footer > div {
 @media (min-width: 768px) {
   #studio > div ul {
     display: grid;
-    grid-template-columns: repeat 4 1fr;
+    grid-template-columns: repeat(4 1fr);
     grid-template-areas: "studio1 studio1 studio2 studio2" "studio3 studio3 studio4 studio4" ". studio5 .";
     gap: 16px;
   }

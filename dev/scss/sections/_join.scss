@@ -32,7 +32,32 @@
             div{
                 grid-area: join-content; 
 
-               
+               section{
+
+               }
+
+               aside{ 
+                   div{
+                       background-position: center;
+                       background-size: cover;
+                       border: 4px $white solid;
+                       height: 85px;
+                       width: 85px;
+                       border-radius: 100%; 
+                   }
+
+                   #join1{
+                       background-image: url("../img/join/join1.jpg"); 
+
+                   }
+
+                   #join2{
+                    background-image: url("../img/join/join2.jpg"); 
+
+                   }
+
+
+               }
             }
         }
     }

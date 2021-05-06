@@ -1,5 +1,4 @@
-footer{
-
+footer {
     background-color: $night;
     color: $dullteal;
     display: grid;
@@ -22,7 +21,7 @@ footer{
             "come follow-us";
         }
 
-        @include xl{ 
+        @include lg{ 
             grid-template-columns: repeat(3, 1fr);
             grid-template-areas: 
             "come follow-us";

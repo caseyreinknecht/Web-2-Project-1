@@ -379,10 +379,6 @@ ul li {
   align-items: center;
 }
 
-img {
-  width: 100%;
-}
-
 /* =============
     Typography
 ============= */
@@ -428,16 +424,13 @@ textarea {
 /* =============
     Navigation
 ============= */
-/* =============
-    Header
-============= */
 header {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". header .";
+  background-color: #0B142B;
 }
 header > div {
-  background-color: #0B142B;
   grid-area: header;
 }
 
@@ -460,23 +453,28 @@ footer > div {
   footer > div {
     display: grid;
     grid-template-columns: 50% auto;
-    grid-template-areas: "come-to-the-studio get-more-information" "follow-us";
+    grid-template-areas: "come information" "come follow-us";
   }
 }
 @media (min-width: 1200px) {
   footer > div {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "come-to-the-studio get-more-information follow-us";
+    grid-template-areas: "come follow-us";
   }
 }
 @media (min-width: 768px) {
-  footer > div section #cometothestudio {
-    grid-area: come-to-the-studio;
+  footer > div li #come {
+    grid-area: come;
   }
 }
 @media (min-width: 768px) {
-  footer > div section #getmoreinformation {
-    grid-area: get-more-information;
+  footer > div li #information {
+    grid-area: information;
+  }
+}
+@media (min-width: 768px) {
+  footer > div li #follow-us {
+    grid-area: follow-us;
   }
 }
 
@@ -496,9 +494,8 @@ footer > div {
 }
 #search > div {
   grid-area: search;
-  color: #0B142B;
 }
-#search > div input button {
+#search > div form input button {
   background-color: #91C1C0;
 }
 
@@ -507,37 +504,37 @@ footer > div {
   width: 100%;
 }
 @media (min-width: 768px) {
-  #hero section ul {
+  #hero ul {
     display: grid;
     grid-template-columns: 40% auto;
   }
 }
 @media (min-width: 992px) {
-  #hero section ul {
+  #hero ul {
     grid-template-columns: 50% auto;
   }
 }
-#hero section ul li {
+#hero ul li {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". hero-content .";
 }
 @media (min-width: 1200px) {
-  #hero section ul li {
+  #hero ul li {
     grid-template-columns: auto 480px 16px;
   }
 }
-#hero section ul li a {
+#hero ul li a {
   grid-area: hero-content;
 }
-#hero section ul li #hero1 {
+#hero ul #hero1 {
   background-color: #5AC0BE;
 }
-#hero section ul li #hero2 {
+#hero ul #hero2 {
   background-color: #91C1C0;
 }
 @media (min-width: 1200px) {
-  #hero section ul li #hero2 {
+  #hero ul #hero2 {
     grid-template-columns: 16px 480px auto;
   }
 }
@@ -545,7 +542,7 @@ footer > div {
 @media (min-width: 768px) {
   #join {
     display: grid;
-    grid-template-columns: 16 auto 16;
+    grid-template-columns: 16px auto 16px;
     grid-template-areas: ". join .";
   }
 }
@@ -575,16 +572,7 @@ footer > div {
 #join ul li div {
   grid-area: join-content;
 }
-#join ul li div aside div {
-  background-position: center;
-  border: 4px #fff;
-  height: 85px;
-  width: 85px;
-  border-radius: 100%;
-}
-/* =============
-    Images
-============= */
+
 @media (min-width: 1200px) {
   #images {
     display: grid;
@@ -671,9 +659,6 @@ footer > div {
 #studio > div ul li {
   background-color: #5AC0BE;
   color: #0B142B;
-}
-#studio > div ul li img {
-  width: 100%;
 }
 #studio > div ul li section {
   display: grid;

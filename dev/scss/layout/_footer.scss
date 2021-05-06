@@ -18,27 +18,33 @@ footer{
             display: grid;
             grid-template-columns: 50% auto;
             grid-template-areas: 
-            "come-to-the-studio get-more-information"
-            "follow-us";
+            "come information"
+            "come follow-us";
         }
 
         @include xl{ 
             grid-template-columns: repeat(3, 1fr);
             grid-template-areas: 
-            "come-to-the-studio get-more-information follow-us";
+            "come follow-us";
         }
 
-        section{ 
+        li{  
 
-            #cometothestudio{
+            #come{
                 @include md{
-                    grid-area: come-to-the-studio 
+                    grid-area: come;
                 }
             }
     
-            #getmoreinformation{
+            #information{
                 @include md{
-                    grid-area: get-more-information
+                    grid-area: information;
+                }
+            }
+
+            #follow-us{
+                @include md{
+                    grid-area: follow-us; 
                 }
             }
 

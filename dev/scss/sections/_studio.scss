@@ -1,5 +1,6 @@
 #studio{
 
+    
     @include md{
         display: grid;
         grid-template-columns: 16px auto 16px;
@@ -11,11 +12,14 @@
     } 
 
     >div{
+        
+        
         @include md{
             grid-area: studio;
         }
 
         ul{
+            
 
             @include md{ 
                 display: grid;
@@ -39,14 +43,13 @@
             li{
                 background-color: $brightteal; 
                 color: $night;
-                img{
-                    width: 100%
-                }
+                
 
                 section {
                     display: grid;
                     grid-template-columns: 16px auto 16px;
                     grid-template-areas: ". studio-content .";
+                    
 
                     >div{
                         grid-area: studio-content;

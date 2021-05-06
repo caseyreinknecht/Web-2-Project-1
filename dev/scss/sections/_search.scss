@@ -13,14 +13,20 @@
 
     >div{
         grid-area: search;
-        color: $night;
-       
-        input{ 
+        
+
+        form{
+
+            input{ 
 
          
-             button{
-                background-color: $dullteal;
-            }
+                button{
+                   background-color: $dullteal;
+               }
+           }
+
         }
+       
+        
     }
 } 

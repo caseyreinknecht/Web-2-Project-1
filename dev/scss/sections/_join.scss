@@ -2,7 +2,7 @@
 
     @include md{
         display: grid;
-        grid-template-columns: 16 auto 16;
+        grid-template-columns: 16px auto 16px;
         grid-template-areas: ". join .";
     }
 
@@ -32,24 +32,7 @@
             div{
                 grid-area: join-content; 
 
-                section{
-
-                }
-
-                aside{
-                    div{
-                        background-position: center;
-                        border: 4px $white;
-                        height: 85px;
-                        width: 85px;
-                        border-radius: 100% 
-
-                    }
-
-                    #join1{
-                        
-                    }
-                }
+               
             }
         }
     }

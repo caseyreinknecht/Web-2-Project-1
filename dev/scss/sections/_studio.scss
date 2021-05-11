@@ -1,100 +1,98 @@
-#studio{
+#studio {
 
 
 
-    @include md{
+    @include md {
         display: grid;
         grid-template-columns: 16px auto 16px;
         grid-template-areas: ". studio .";
     }
 
-    @include xl{
+    @include xl {
         grid-template-columns: auto 1200px auto;
-    } 
+    }
 
-    >div{
-        
-        
-        @include md{
+    >div {
+
+
+        @include md {
             grid-area: studio;
         }
 
-        ul{ 
-            
+        ul {
 
-            @include md{ 
+
+            @include md {
                 display: grid;
-                grid-template-columns: repeat (4 1fr); 
-                grid-template-areas: 
-                "studio1 studio1 studio2 studio2"
-                "studio3 studio3 studio4 studio4"
-                ". studio5 .";
+                // grid-template-columns: repeat (4 1fr); 
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-areas:
+                    "studio1 studio1 studio2 studio2"
+                    "studio3 studio3 studio4 studio4"
+                    ". studio5 studeio5 .";
                 gap: 16px
             }
 
-            @include lg{ 
-                display: grid;
-                grid-template-columns: repeat (6 1fr);
-                grid-template-areas: 
-                "studio1 studio1 studio2 studio2 studio3 studio3"
-                ". studio4 studio4 studio5 studio5";
-                gap: 16px
+            @include lg {
+
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-areas:
+                    "studio1 studio1 studio2 studio2 studio3 studio3"
+                    ". studio4 studio4 studio5 studio5 .";
             }
 
-            li{
-                background-color: $brightteal; 
+            li {
+                background-color: $brightteal;
                 color: $night;
-                
+
 
                 section {
                     display: grid;
                     grid-template-columns: 16px auto 16px;
                     grid-template-areas: ". studio-content .";
-                    
 
-                    >div{
+
+                    >div {
                         grid-area: studio-content;
                     }
 
                 }
             }
 
-            #studio1{
-                @include md{
+            #studio1 {
+                @include md {
                     grid-area: studio1;
                 }
-                
+
             }
 
-            #studio2{
-                @include md{
+            #studio2 {
+                @include md {
                     grid-area: studio2;
                 }
-                
+
             }
 
-            #studio3{
-                @include md{
+            #studio3 {
+                @include md {
                     grid-area: studio3;
                 }
-                
+
             }
 
-            #studio4{
-                @include md{
+            #studio4 {
+                @include md {
                     grid-area: studio4;
                 }
-                
+
             }
 
-            #studio5{
-                @include md{
+            #studio5 {
+                @include md {
                     grid-area: studio5;
                 }
-                
+
             }
         }
     }
 }
-    
-   

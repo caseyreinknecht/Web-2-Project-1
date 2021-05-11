@@ -29,8 +29,7 @@ footer{
             "come follow-us";
         }
 
-        li{  
-
+        
             #come{
                 @include md{
                     grid-area: come;
@@ -49,7 +48,7 @@ footer{
                 }
             }
 
-        }
+
         
     }
 } 

@@ -467,17 +467,17 @@ footer > div {
   }
 }
 @media (min-width: 768px) {
-  footer > div li #come {
+  footer > div #come {
     grid-area: come;
   }
 }
 @media (min-width: 768px) {
-  footer > div li #information {
+  footer > div #information {
     grid-area: information;
   }
 }
 @media (min-width: 768px) {
-  footer > div li #follow-us {
+  footer > div #follow-us {
     grid-area: follow-us;
   }
 }
@@ -682,17 +682,15 @@ footer > div {
 @media (min-width: 768px) {
   #studio > div ul {
     display: grid;
-    grid-template-columns: repeat 4 1fr;
-    grid-template-areas: "studio1 studio1 studio2 studio2" "studio3 studio3 studio4 studio4" ". studio5 .";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "studio1 studio1 studio2 studio2" "studio3 studio3 studio4 studio4" ". studio5 studeio5 .";
     gap: 16px;
   }
 }
 @media (min-width: 992px) {
   #studio > div ul {
-    display: grid;
-    grid-template-columns: repeat 6 1fr;
-    grid-template-areas: "studio1 studio1 studio2 studio2 studio3 studio3" ". studio4 studio4 studio5 studio5";
-    gap: 16px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "studio1 studio1 studio2 studio2 studio3 studio3" ". studio4 studio4 studio5 studio5 .";
   }
 }
 #studio > div ul li {

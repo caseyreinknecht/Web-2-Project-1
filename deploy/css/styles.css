@@ -357,11 +357,14 @@ figure {
   margin: 0;
 }
 
-ul {
+body {
+  font-family: "Oxygen", sans-serif;
+}
+body ul {
   padding: 0;
   margin: 0;
 }
-ul li {
+body ul li {
   list-style: none;
 }
 
@@ -499,7 +502,14 @@ footer > div {
 #search > div {
   grid-area: search;
 }
-#search > div form input button {
+@media (min-width: 768px) {
+  #search > div form input {
+    font-size: 1.8125rem;
+    font-weight: 300;
+    color: #0B142B;
+  }
+}
+#search > div form button {
   background-color: #91C1C0;
 }
 
@@ -575,6 +585,20 @@ footer > div {
 }
 #join ul li div {
   grid-area: join-content;
+}
+#join ul li div section h1 {
+  font-size: 1.4375rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  #join ul li div section h1 {
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 992px) {
+  #join ul li div section h1 {
+    font-size: 2rem;
+  }
 }
 #join ul li div aside div {
   background-position: center;

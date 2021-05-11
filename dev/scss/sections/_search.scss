@@ -18,12 +18,19 @@
         form{
 
             input{ 
-
+                
+                @include md{
+                    font-size: rem-calc(29);
+                    font-weight:300; 
+                    color: $night;
+                }
          
-                button{
-                   background-color: $dullteal;
-               }
+               
            }
+           
+        button{
+            background-color: $dullteal;
+        }
 
         }
        

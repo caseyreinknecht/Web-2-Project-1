@@ -112,6 +112,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/deploy\/img\/logo\/logo.png" : {
+      "ft" : 32768,
+      "iS" : 14321,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/logo\/logo.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/deploy\/img\/studio\/studio1.jpg" : {
       "ft" : 16384,
       "iS" : 51050,

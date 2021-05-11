@@ -531,16 +531,9 @@ footer > div h1 {
   object-fit: cover;
   width: 100%;
 }
-@media (min-width: 768px) {
-  #hero ul {
-    display: grid;
-    grid-template-columns: 40% auto;
-  }
-}
-@media (min-width: 992px) {
-  #hero ul {
-    grid-template-columns: 50% auto;
-  }
+#hero ul {
+  font-size: 1.4375rem;
+  font-weight: 400;
 }
 #hero ul li {
   display: grid;
@@ -557,12 +550,27 @@ footer > div h1 {
 }
 #hero ul #hero1 {
   background-color: #5AC0BE;
+  padding: 18px 0;
+}
+@media (min-width: 768px) {
+  #hero ul #hero1 {
+    display: grid;
+    grid-template-columns: 40% auto;
+  }
+}
+@media (min-width: 992px) {
+  #hero ul #hero1 {
+    display: grid;
+    grid-template-columns: 50% auto;
+  }
 }
 #hero ul #hero2 {
   background-color: #91C1C0;
+  padding: 18px 0;
 }
 @media (min-width: 1200px) {
   #hero ul #hero2 {
+    display: grid;
     grid-template-columns: 16px 480px auto;
   }
 }
@@ -603,6 +611,7 @@ footer > div h1 {
 #join ul li div section h1 {
   font-size: 1.4375rem;
   font-weight: 400;
+  padding: 16px 0;
 }
 @media (min-width: 768px) {
   #join ul li div section h1 {
@@ -700,6 +709,11 @@ footer > div h1 {
   }
 }
 
+#studio {
+  font-size: 1.125rem;
+  font-weight: 300;
+  padding: 16px 0;
+}
 @media (min-width: 768px) {
   #studio {
     display: grid;

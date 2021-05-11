@@ -36,6 +36,7 @@
                    h1{
                        font-size: rem-calc(23);
                        font-weight: 400;
+                       padding: 16px 0;
 
                        @include md{
                         font-size: rem-calc(30); 
@@ -61,6 +62,7 @@
 
                    #join1{
                        background-image: url("../img/join/join1.jpg"); 
+                       
 
                    }
 

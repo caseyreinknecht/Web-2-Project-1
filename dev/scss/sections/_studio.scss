@@ -1,4 +1,7 @@
 #studio {
+    font-size: rem-calc(18);
+    font-weight: 300;
+    padding: 16px 0;
 
 
 
@@ -14,6 +17,7 @@
 
     >div {
 
+        
 
         @include md {
             grid-area: studio;

@@ -7,16 +7,10 @@
 
 
     ul{
+        font-size: rem-calc(23);
+        font-weight: 400;
+
         
-        @include md{
-            display: grid;
-            grid-template-columns: 40% auto;
-        }
-
-        @include lg{
-            grid-template-columns: 50% auto;
-        }
-
         li{
             display: grid;
             grid-template-columns: 16px auto 16px;
@@ -34,13 +28,36 @@
 
     #hero1{
         background-color: $brightteal;
+        padding: 18px 0;
+       
         
+       
+
+        @include md{
+            display: grid;
+            grid-template-columns: 40% auto;
+           
+            
+        }
+
+        @include lg{
+            display: grid;
+            grid-template-columns: 50% auto;
+           
+            
+        }
     }
 
     #hero2{
         background-color: $dullteal;
+       padding: 18px 0;
+        
+       
+
         @include xl{
+            display: grid;
         grid-template-columns: 16px 480px auto; 
+        
     } 
 }   
 }  

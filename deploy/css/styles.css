@@ -456,6 +456,20 @@ footer {
 footer > div {
   grid-area: footer;
 }
+footer > div h1 {
+  font-size: 1.4375rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  footer > div h1 {
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 992px) {
+  footer > div h1 {
+    font-size: 2rem;
+  }
+}
 @media (min-width: 768px) {
   footer > div {
     display: grid;
@@ -707,7 +721,7 @@ footer > div {
   #studio > div ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "studio1 studio1 studio2 studio2" "studio3 studio3 studio4 studio4" ". studio5 studeio5 .";
+    grid-template-areas: "studio1 studio1 studio2 studio2" "studio3 studio3 studio4 studio4" ". studio5 studio5 .";
     gap: 16px;
   }
 }

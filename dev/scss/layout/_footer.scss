@@ -5,7 +5,7 @@ footer{
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". footer .";
     
-
+    
     @include xl{
         grid-template-columns: auto 1200px auto 
     }
@@ -14,6 +14,21 @@ footer{
         
         grid-area: footer;
         
+            h1{
+                font-size: rem-calc(23);
+                font-weight: 400;
+
+                @include md{
+                 font-size: rem-calc(30); 
+                }
+
+                @include lg{
+                 font-size: rem-calc(32); 
+                }
+                    
+            
+
+        }
         
         @include md{
             display: grid;

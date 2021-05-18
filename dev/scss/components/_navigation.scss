@@ -11,16 +11,20 @@ a{
         height: 100%;
         @include lg{
             display: flex;
+            justify-content: flex-end;
         }
 
         li{
             margin-bottom: 18px;
+            text-align: right;
 
             @include lg{
                 align-items: center;
                 border-right: 2px solid $dullteal;
                 display: flex;
                 margin-bottom: 0px;
+                
+
             }
 
             a:link,
@@ -41,16 +45,16 @@ a{
             }
         }
 
-        li:first-child{
-            border: none;
-            display: none;
+        // li:first-child{
+        //     border: none;
+        //     display: none;
 
-            @include md{
-                display: list-item;
-            }
+        //     @include md{
+        //         display: list-item;
+        //     }
 
 
-        }
+        // }
 
         li:last-child{
             border: none;

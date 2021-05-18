@@ -450,10 +450,12 @@ a {
 @media (min-width: 992px) {
   #nav-container ul {
     display: flex;
+    justify-content: flex-end;
   }
 }
 #nav-container ul li {
   margin-bottom: 18px;
+  text-align: right;
 }
 @media (min-width: 992px) {
   #nav-container ul li {
@@ -482,15 +484,6 @@ a {
 #nav-container ul li a:visited:active {
   color: #fff;
 }
-#nav-container ul li:first-child {
-  border: none;
-  display: none;
-}
-@media (min-width: 768px) {
-  #nav-container ul li:first-child {
-    display: list-item;
-  }
-}
 #nav-container ul li:last-child {
   border: none;
 }
@@ -508,12 +501,12 @@ header img {
 }
 header > div {
   display: grid;
-  grid-template-areas: "hero burger" "nav nav";
+  grid-template-areas: "logo burger" "nav nav";
   grid-template-columns: 20% auto;
 }
 @media (min-width: 992px) {
   header > div {
-    grid-template-areas: "nav nav";
+    grid-template-areas: "logo nav";
     grid-template-columns: 20% auto;
   }
 }
@@ -521,6 +514,14 @@ header > div {
   header > div {
     padding: 23px 0;
   }
+}
+header > div #logo-container {
+  grid-area: logo;
+  padding: 10px;
+  text-align: left;
+}
+header > div #logo-container a:link, header > div #logo-container a:visited {
+  transition: 0.25s;
 }
 header #burger-container {
   align-items: center;
@@ -535,6 +536,7 @@ header #burger-container {
   }
 }
 header #burger-container i {
+  margin-left: auto;
   cursor: pointer;
   font-size: 1.875rem;
 }

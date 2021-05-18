@@ -12,19 +12,32 @@ header{
     >div{
         display: grid;
         grid-template-areas: 
-        "hero burger"
+        "logo burger"
         "nav nav";
         grid-template-columns: 20% auto;
        
 
         @include lg{
-            grid-template-areas: "nav nav";
+            grid-template-areas: "logo nav";
             grid-template-columns: 20% auto;
         }
         
     
         @include md{
             padding: 23px 0;
+        }
+        #logo-container{
+            grid-area: logo;
+            padding: 10px;
+            text-align: left;
+
+            a:link, a:visited{
+                transition: 0.25s;
+
+                &:hover{
+
+                }
+            }
         }
     }
 
@@ -40,6 +53,7 @@ header{
         }
 
         i{
+            margin-left: auto;
             cursor: pointer; 
             font-size: rem-calc(30);
         }

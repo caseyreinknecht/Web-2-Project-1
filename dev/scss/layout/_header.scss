@@ -1,19 +1,62 @@
 header{
+    background-color: $night;
+    left: 0;
+    position: fixed;
+    top:0;
+    width: 100%;
+    color: $dullteal;
     
     img{
         height: 70px;
         width: 120px;
     }
-    display: grid;
-    grid-template-columns: 16px auto 16px;
-    grid-template-areas: ". header .";
-    background-color: $night;
-    padding: 20px 0;
-    
+    >div{
+        display: grid;
+        grid-template-areas: 
+        "hero burger"
+        "nav nav";
+        grid-template-columns: 20% auto;
+       
 
-    @include md{
-        padding: 23px 0;
+        @include lg{
+            grid-template-areas: "nav nav";
+            grid-template-columns: 20% auto;
+        }
+        
+    
+        @include md{
+            padding: 23px 0;
+        }
     }
+
+    #burger-container {
+        align-items: center;
+        display: flex;
+        grid-area: burger;
+        padding: 10px;
+        color: $dullteal;
+
+        @include lg{
+        display: none  !important;
+        }
+
+        i{
+            cursor: pointer; 
+            font-size: rem-calc(30);
+        }
+    }
+
+    #nav-container{
+        background-color: $night;
+        grid-area: nav;
+        padding: 18px 16px 16px;
+
+        @include lg{
+            background-color: $night;
+            display: block !important;
+        }
+    }
+    
 
     >div{
       

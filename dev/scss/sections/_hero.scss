@@ -1,14 +1,29 @@
 #hero{  
 
     img{
+        display: block;
         object-fit: cover;
         width: 100%;
+        
     }
 
 
     ul{
-        font-size: rem-calc(23);
-        font-weight: 400;
+        
+        @include md{
+            display: grid;
+            grid-template-columns: 45% auto;
+           
+            
+        }
+
+        @include lg{
+            display: grid;
+            grid-template-columns: 50% auto;
+           
+            
+        }
+        
 
         
         li{
@@ -21,6 +36,38 @@
                 grid-template-columns: auto 480px 16px;
             }
 
+            a:link, a:visited{
+                grid-area: hero-content;
+                color: $night;
+                transition: 0.25s;
+
+                display: flex;
+
+
+                
+                &:hover, &:active {
+                    color: $white;
+                    background-color: $night;
+                } 
+                
+                div{
+                    
+                }
+                .hero-sub-bottom{
+                    margin-left: auto;
+                    display: flex;
+                    align-items: center;
+                    h5{
+                      display: none;  
+
+                      @include lg{
+                          display: block;
+                      }
+                    }
+                }
+                
+            }
+
             a{
                 grid-area: hero-content; 
             }
@@ -28,7 +75,24 @@
 
     #hero1{
         background-color: $brightteal;
-        padding: 18px 0;
+        padding: 18px 15px;
+        
+        h2{
+            font-size: rem-calc(18);
+            font-weight: 600;
+            font-variation-settings: "wght" 600;
+        }
+
+        p{
+        font-size: rem-calc(16);
+        font-weight: 300;
+        font-variation-settings: "wght" 300;
+        }
+        
+        
+        
+
+        
        
         
        
@@ -50,9 +114,20 @@
 
     #hero2{
         background-color: $dullteal;
-       padding: 18px 0;
-        
+       padding: 18px 15px;
        
+       
+       h2{
+        font-size: rem-calc(18);
+        font-weight: 600;
+        font-variation-settings: "wght" 600;
+    }
+
+    p{
+    font-size: rem-calc(16);
+    font-weight: 300;
+    font-variation-settings: "wght" 300;
+    }
 
         @include xl{
             display: grid;

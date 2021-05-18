@@ -1,28 +1,36 @@
 #studio {
     font-size: rem-calc(18);
     font-weight: 300;
-    padding: 16px 0;
+    margin: 24px 0;
 
 
 
     @include md {
         display: grid;
+        margin: 32px 0;
         grid-template-columns: 16px auto 16px;
         grid-template-areas: ". studio .";
     }
 
     @include xl {
+        margin: 64px 0;
         grid-template-columns: auto 1200px auto;
     }
 
     >div {
 
-        
-
+    
         @include md {
             grid-area: studio;
         }
 
+        h1{
+            font-size: rem-calc(22);
+            font-variation-settings: "wght" 300; 
+            padding: 0px 16px 24px;
+
+        }
+       
         ul {
 
 
@@ -48,16 +56,24 @@
             li {
                 background-color: $brightteal;
                 color: $night;
+                img{
+                    width: 100%;
+                }
 
 
                 section {
                     display: grid;
                     grid-template-columns: 16px auto 16px;
                     grid-template-areas: ". studio-content .";
+                    padding: 16px 0;
 
 
                     >div {
                         grid-area: studio-content;
+
+                       button{
+                          margin: 24px; 
+                       }
                     }
 
                 }

@@ -389,11 +389,7 @@ img {
 /* =============
     Typography
 ============= */
-body {
-  font-family: "Montserrat", sans-serif;
-}
-
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
@@ -410,6 +406,19 @@ p {
 /* =============
     Buttons
 ============= */
+.dull-teal-button {
+  background-color: #91C1C0;
+  border: none;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 10px;
+  transition: 0.25s;
+}
+.dull-teal-button:hover {
+  background-color: #0B142B;
+  color: #fff;
+}
+
 /* =============
     Forms
 ============= */
@@ -431,11 +440,25 @@ textarea {
 /* =============
     Navigation
 ============= */
+a {
+  text-decoration: none;
+}
+
 header {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". header .";
   background-color: #0B142B;
+  padding: 20px 0;
+}
+header img {
+  height: 70px;
+  width: 120px;
+}
+@media (min-width: 768px) {
+  header {
+    padding: 23px 0;
+  }
 }
 header > div {
   grid-area: header;
@@ -447,10 +470,17 @@ footer {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". footer .";
+  padding: 24px 0;
+}
+@media (min-width: 768px) {
+  footer {
+    padding: 32px 0;
+  }
 }
 @media (min-width: 1200px) {
   footer {
     grid-template-columns: auto 1200px auto;
+    padding: 64px 0;
   }
 }
 footer > div {
@@ -479,9 +509,23 @@ footer > div h1 {
 }
 @media (min-width: 992px) {
   footer > div {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "come follow-us";
+    grid-template-columns: 60% auto;
+    grid-template-areas: "come information" "come follow-us";
   }
+}
+footer > div section ul li {
+  display: flex;
+  margin-bottom: 24px;
+}
+footer > div section ul li div {
+  display: flex;
+  align-items: center;
+}
+footer > div section ul li a:link, footer > div section ul li a:visited {
+  color: #5AC0BE;
+}
+footer > div section ul li a:link:hover, footer > div section ul li a:link:active, footer > div section ul li a:visited:hover, footer > div section ul li a:visited:active {
+  color: white;
 }
 @media (min-width: 768px) {
   footer > div #come {
@@ -493,9 +537,28 @@ footer > div h1 {
     grid-area: information;
   }
 }
+footer > div #information form input {
+  background-color: #fff;
+  border: none;
+  padding: 16px 2%;
+  width: 50%;
+  margin-bottom: 20px;
+}
 @media (min-width: 768px) {
   footer > div #follow-us {
     grid-area: follow-us;
+  }
+}
+footer > div #follow-us ul {
+  display: flex;
+  margin-top: 16px;
+}
+footer > div #follow-us ul li {
+  margin: 0 16px;
+}
+@media (min-width: 768px) {
+  footer > div #follow-us ul li {
+    margin: 0 8px;
   }
 }
 
@@ -507,6 +570,12 @@ footer > div h1 {
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". search .";
   background-color: #fff;
+  padding: 18px 0;
+}
+@media (min-width: 768px) {
+  #search {
+    padding: 22px 0;
+  }
 }
 @media (min-width: 1200px) {
   #search {
@@ -516,24 +585,72 @@ footer > div h1 {
 #search > div {
   grid-area: search;
 }
+#search > div form {
+  display: grid;
+  grid-template-columns: 75% auto;
+  gap: 10px;
+}
+@media (min-width: 768px) {
+  #search > div form {
+    grid-template-columns: 85% auto;
+  }
+}
+@media (min-width: 1200px) {
+  #search > div form {
+    grid-template-columns: 90% auto;
+  }
+}
+#search > div form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #91C1C0;
+  font-weight: 300;
+  border-radius: 0px;
+  font-size: 1.25rem;
+  color: #91C1C0;
+}
 @media (min-width: 768px) {
   #search > div form input {
     font-size: 1.8125rem;
     font-weight: 300;
     color: #0B142B;
   }
+  #search > div form input::placeholder {
+    color: #91C1C0;
+    opacity: 1;
+  }
+  #search > div form input:-ms-input-placeholder {
+    color: #91C1C0;
+  }
+  #search > div form input::-ms-input-placeholder {
+    color: #91C1C0;
+  }
 }
 #search > div form button {
   background-color: #91C1C0;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-size: 1rem;
+  width: 80%;
 }
 
 #hero img {
+  display: block;
   object-fit: cover;
   width: 100%;
 }
-#hero ul {
-  font-size: 1.4375rem;
-  font-weight: 400;
+@media (min-width: 768px) {
+  #hero ul {
+    display: grid;
+    grid-template-columns: 45% auto;
+  }
+}
+@media (min-width: 992px) {
+  #hero ul {
+    display: grid;
+    grid-template-columns: 50% auto;
+  }
 }
 #hero ul li {
   display: grid;
@@ -545,12 +662,45 @@ footer > div h1 {
     grid-template-columns: auto 480px 16px;
   }
 }
+#hero ul li a:link, #hero ul li a:visited {
+  grid-area: hero-content;
+  color: #0B142B;
+  transition: 0.25s;
+  display: flex;
+}
+#hero ul li a:link:hover, #hero ul li a:link:active, #hero ul li a:visited:hover, #hero ul li a:visited:active {
+  color: #fff;
+  background-color: #0B142B;
+}
+#hero ul li a:link .hero-sub-bottom, #hero ul li a:visited .hero-sub-bottom {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+#hero ul li a:link .hero-sub-bottom h5, #hero ul li a:visited .hero-sub-bottom h5 {
+  display: none;
+}
+@media (min-width: 992px) {
+  #hero ul li a:link .hero-sub-bottom h5, #hero ul li a:visited .hero-sub-bottom h5 {
+    display: block;
+  }
+}
 #hero ul li a {
   grid-area: hero-content;
 }
 #hero ul #hero1 {
   background-color: #5AC0BE;
-  padding: 18px 0;
+  padding: 18px 15px;
+}
+#hero ul #hero1 h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
+}
+#hero ul #hero1 p {
+  font-size: 1rem;
+  font-weight: 300;
+  font-variation-settings: "wght" 300;
 }
 @media (min-width: 768px) {
   #hero ul #hero1 {
@@ -566,7 +716,17 @@ footer > div h1 {
 }
 #hero ul #hero2 {
   background-color: #91C1C0;
-  padding: 18px 0;
+  padding: 18px 15px;
+}
+#hero ul #hero2 h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
+}
+#hero ul #hero2 p {
+  font-size: 1rem;
+  font-weight: 300;
+  font-variation-settings: "wght" 300;
 }
 @media (min-width: 1200px) {
   #hero ul #hero2 {
@@ -575,6 +735,9 @@ footer > div h1 {
   }
 }
 
+#join {
+  padding: 16px 0;
+}
 @media (min-width: 768px) {
   #join {
     display: grid;
@@ -604,24 +767,35 @@ footer > div h1 {
   grid-template-areas: ". join-content .";
   background-color: #0B142B;
   color: #fff;
+  padding: 24px 0;
 }
 #join ul li div {
   grid-area: join-content;
+  display: flex;
 }
-#join ul li div section h1 {
+#join ul li div section {
+  display: flex;
+  align-items: center;
+}
+#join ul li div section > div h1 {
   font-size: 1.4375rem;
-  font-weight: 400;
-  padding: 16px 0;
+  font-variation-settings: "wght" 300;
+}
+#join ul li div section > div h1 button {
+  margin-top: 10px;
 }
 @media (min-width: 768px) {
-  #join ul li div section h1 {
+  #join ul li div section > div h1 {
     font-size: 1.875rem;
   }
 }
 @media (min-width: 992px) {
-  #join ul li div section h1 {
+  #join ul li div section > div h1 {
     font-size: 2rem;
   }
+}
+#join ul li div aside {
+  margin-left: auto;
 }
 #join ul li div aside div {
   background-position: center;
@@ -712,17 +886,19 @@ footer > div h1 {
 #studio {
   font-size: 1.125rem;
   font-weight: 300;
-  padding: 16px 0;
+  margin: 24px 0;
 }
 @media (min-width: 768px) {
   #studio {
     display: grid;
+    margin: 32px 0;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". studio .";
   }
 }
 @media (min-width: 1200px) {
   #studio {
+    margin: 64px 0;
     grid-template-columns: auto 1200px auto;
   }
 }
@@ -730,6 +906,11 @@ footer > div h1 {
   #studio > div {
     grid-area: studio;
   }
+}
+#studio > div h1 {
+  font-size: 1.375rem;
+  font-variation-settings: "wght" 300;
+  padding: 0px 16px 24px;
 }
 @media (min-width: 768px) {
   #studio > div ul {
@@ -749,13 +930,20 @@ footer > div h1 {
   background-color: #5AC0BE;
   color: #0B142B;
 }
+#studio > div ul li img {
+  width: 100%;
+}
 #studio > div ul li section {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". studio-content .";
+  padding: 16px 0;
 }
 #studio > div ul li section > div {
   grid-area: studio-content;
+}
+#studio > div ul li section > div button {
+  margin: 24px;
 }
 @media (min-width: 768px) {
   #studio > div ul #studio1 {

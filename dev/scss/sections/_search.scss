@@ -6,6 +6,12 @@
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". search .";
     background-color: $white; 
+    padding: 18px 0;
+    
+
+    @include md{
+        padding: 22px 0;
+    }
 
     @include xl{
         grid-template-columns: auto 1000px auto;
@@ -17,12 +23,46 @@
 
         form{
 
+            display: grid;
+            grid-template-columns: 75% auto;
+            gap: 10px;
+
+            @include md{
+                grid-template-columns: 85% auto;
+            }
+
+            @include xl{
+                grid-template-columns: 90% auto;
+            }
+
             input{ 
+
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid $dullteal;
+                font-weight: 300;
+                border-radius: 0px;
+                font-size: rem-calc(20);
+                color: $dullteal;
+                
                 
                 @include md{
                     font-size: rem-calc(29);
                     font-weight:300; 
                     color: $night;
+
+                    &::placeholder {
+                        color: $dullteal;
+                        opacity: 1; 
+                    }
+
+                    &:-ms-input-placeholder {
+                        color: $dullteal;
+                    }
+
+                    &::-ms-input-placeholder {
+                        color: $dullteal;
+                    }
                 }
          
                
@@ -30,10 +70,15 @@
            
         button{
             background-color: $dullteal;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 0;
+            font-size: rem-calc(16);
+            width: 80%;
+            
         }
 
-        }
-       
+        } 
         
     }
 } 

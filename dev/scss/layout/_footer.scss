@@ -4,15 +4,20 @@ footer{
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". footer .";
+    padding: 24px 0;
     
-    
+    @include md{
+        padding: 32px 0;
+    }
     @include xl{
-        grid-template-columns: auto 1200px auto 
+        grid-template-columns: auto 1200px auto;
+        padding: 64px 0;
     }
 
     >div{
         
         grid-area: footer;
+
         
             h1{
                 font-size: rem-calc(23);
@@ -39,9 +44,35 @@ footer{
         }
 
         @include lg{ 
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 60% auto;
             grid-template-areas: 
+            "come information"
             "come follow-us";
+        }
+
+        section{
+
+            ul{
+
+                li{
+                    display: flex;
+                    margin-bottom: 24px;
+                    
+
+                    div{
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    a:link, a:visited{
+                        color: $brightteal;
+
+                        &:hover, &:active{
+                            color:white;
+                        }
+                    }
+                }
+            }
         }
 
         
@@ -54,12 +85,35 @@ footer{
             #information{
                 @include md{
                     grid-area: information;
+    
+                }
+
+                form{
+                    input{
+                        background-color: $white;
+                        border: none;
+                        padding: 16px 2%;
+                        width: 50%;
+                        margin-bottom: 20px;
+                    }
                 }
             }
 
             #follow-us{
                 @include md{
                     grid-area: follow-us; 
+                }
+
+                ul{
+                    display:flex;
+                    margin-top: 16px;
+                    li{
+                        margin: 0 16px;
+
+                        @include md{
+                            margin: 0 8px;
+                        }
+                    }
                 }
             }
 

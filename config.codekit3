@@ -107,7 +107,7 @@
       "oAP" : "\/deploy\/img\/logo\/logo.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -542,7 +542,7 @@
   "projectAttributes" : {
     "creationDate" : 641849351.53785396,
     "displayValue" : "Web-2-Project-1",
-    "displayValueWasSetByUser" : 0,
+    "displayValueWasSetByUser" : 1,
     "iconImageName" : "brackets-silver",
     "iconImageWasSetByUser" : 0
   },

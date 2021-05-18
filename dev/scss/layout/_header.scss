@@ -1,8 +1,19 @@
 header{
+    
+    img{
+        height: 70px;
+        width: 120px;
+    }
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". header .";
     background-color: $night;
+    padding: 20px 0;
+    
+
+    @include md{
+        padding: 23px 0;
+    }
 
     >div{
       

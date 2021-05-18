@@ -1,3 +1,18 @@
 /* =============
     Buttons
 ============= */
+.dull-teal-button{
+    background-color: $dullteal;
+    border: none;
+    font-size: rem-calc(16);
+    font-weight: 400;
+    padding: 10px;
+    transition: 0.25s;
+    
+
+    &:hover{
+        background-color: $night;
+        color: $white;
+    }
+
+}

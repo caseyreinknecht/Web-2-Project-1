@@ -5,3 +5,55 @@
 a{
     text-decoration: none;
 }
+
+#nav-container{
+    ul{
+        height: 100%;
+        @include lg{
+            display: flex;
+        }
+
+        li{
+            margin-bottom: 18px;
+
+            @include lg{
+                align-items: center;
+                border-right: 2px solid $dullteal;
+                display: flex;
+                margin-bottom: 0px;
+            }
+
+            a:link,
+            a:visited{
+                color: $dullteal;
+                font-family: 'Oxygen', san serif;
+                padding: 0 20px;
+                text-decoration: none;
+                transition: 0.25s;
+                @include lg{
+                    color: $brightteal;
+                }
+
+                &:hover,
+                &:active {
+                    color: $white;
+                }
+            }
+        }
+
+        li:first-child{
+            border: none;
+            display: none;
+
+            @include md{
+                display: list-item;
+            }
+
+
+        }
+
+        li:last-child{
+            border: none;
+        }
+    }
+}

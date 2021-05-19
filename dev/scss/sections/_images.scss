@@ -1,19 +1,16 @@
 #images{
 
-    @include xl{
-        display: grid;
-        grid-template-columns: auto 1200px auto;
-
-        grid-template-areas: ". images .";
-    }
-    
+   
     ul{ 
         display: grid;
         grid-template-rows: 360px 486px; 
+        grid-area: images-contents;
+        grid-template-areas: "images-1" "images-2" "images-3";
 
         @include md{
             grid-template-columns: 50% auto;
             grid-template-rows: 625px;
+            grid-template-areas: "images-1 images-2";
         }
 
         @include lg{ 
@@ -22,8 +19,7 @@
         }
 
         @include xl{
-            grid-area: images; 
-            grid-template-columns: 65% auto;
+            grid-template-columns: 65% 35%;
             grid-template-rows: 377px 377px;
             grid-template-areas: 
             "images-1, images-2"
@@ -33,12 +29,11 @@
         li{
             background-size: cover;
             background-position: center;
-            // img{
-            //     width: 100% 
-            // }
+            
         } 
 
         #images-1{
+            grid-area: images-1;
             background-image: url("../img/images/images1.jpg"); 
 
             @include xl{
@@ -47,10 +42,11 @@
         }
 
         #images-2{
+            grid-area: images-2;
             background-image: url("../img/images/images2.jpg"); 
 
             @include md{
-                background-position: center bottom; 
+                background-position: bottom; 
             }
 
             @include lg{
@@ -58,13 +54,15 @@
             }
 
             @include xl{
+                background-position: top;
                 grid-area: images-2;
             }
         }
 
         #images-3{
-            background-image: url("../img/images/images3.jpg"); 
             display: none;
+            background-image: url("../img/images/images3.jpg"); 
+           
 
             @include xl{
                 display: list-item;

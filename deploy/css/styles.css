@@ -382,10 +382,6 @@ body ul li {
   align-items: center;
 }
 
-img {
-  width: 100%;
-}
-
 /* =============
     Typography
 ============= */
@@ -661,16 +657,24 @@ footer > div #follow-us ul li {
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". search .";
   background-color: #fff;
-  padding: 80px 0;
+  padding: 18px 0;
+  margin-top: 100px;
 }
 @media (min-width: 768px) {
   #search {
     padding: 22px 0;
+    margin-top: 130px;
+  }
+}
+@media (min-width: 992px) {
+  #search {
+    margin-top: 130px;
   }
 }
 @media (min-width: 1200px) {
   #search {
     grid-template-columns: auto 1000px auto;
+    margin-top: 150px;
   }
 }
 #search > div {
@@ -903,21 +907,17 @@ footer > div #follow-us ul li {
   background-image: url("../img/join/join2.jpg");
 }
 
-@media (min-width: 1200px) {
-  #images {
-    display: grid;
-    grid-template-columns: auto 1200px auto;
-    grid-template-areas: ". images .";
-  }
-}
 #images ul {
   display: grid;
   grid-template-rows: 360px 486px;
+  grid-area: images-contents;
+  grid-template-areas: "images-1" "images-2" "images-3";
 }
 @media (min-width: 768px) {
   #images ul {
     grid-template-columns: 50% auto;
     grid-template-rows: 625px;
+    grid-template-areas: "images-1 images-2";
   }
 }
 @media (min-width: 992px) {
@@ -927,8 +927,7 @@ footer > div #follow-us ul li {
 }
 @media (min-width: 1200px) {
   #images ul {
-    grid-area: images;
-    grid-template-columns: 65% auto;
+    grid-template-columns: 65% 35%;
     grid-template-rows: 377px 377px;
     grid-template-areas: "images-1, images-2" "images-1, images-3";
   }
@@ -938,6 +937,7 @@ footer > div #follow-us ul li {
   background-position: center;
 }
 #images ul #images-1 {
+  grid-area: images-1;
   background-image: url("../img/images/images1.jpg");
 }
 @media (min-width: 1200px) {
@@ -946,11 +946,12 @@ footer > div #follow-us ul li {
   }
 }
 #images ul #images-2 {
+  grid-area: images-2;
   background-image: url("../img/images/images2.jpg");
 }
 @media (min-width: 768px) {
   #images ul #images-2 {
-    background-position: center bottom;
+    background-position: bottom;
   }
 }
 @media (min-width: 992px) {
@@ -960,12 +961,13 @@ footer > div #follow-us ul li {
 }
 @media (min-width: 1200px) {
   #images ul #images-2 {
+    background-position: top;
     grid-area: images-2;
   }
 }
 #images ul #images-3 {
-  background-image: url("../img/images/images3.jpg");
   display: none;
+  background-image: url("../img/images/images3.jpg");
 }
 @media (min-width: 1200px) {
   #images ul #images-3 {

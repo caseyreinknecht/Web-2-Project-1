@@ -19,18 +19,18 @@
 
     >div {
 
-    
+
         @include md {
             grid-area: studio;
         }
 
-        h1{
+        h1 {
             font-size: rem-calc(22);
-            font-variation-settings: "wght" 300; 
+            font-variation-settings: "wght"300;
             padding: 0px 16px 24px;
 
         }
-       
+
         ul {
 
 
@@ -56,7 +56,8 @@
             li {
                 background-color: $brightteal;
                 color: $night;
-                img{
+
+                img {
                     width: 100%;
                 }
 
@@ -71,9 +72,9 @@
                     >div {
                         grid-area: studio-content;
 
-                       button{
-                          margin: 24px; 
-                       }
+                        button {
+                            margin: 24px;
+                        }
                     }
 
                 }

@@ -757,26 +757,32 @@ footer > div #follow-us ul li {
     grid-template-columns: auto 480px 16px;
   }
 }
-#hero ul li a:link, #hero ul li a:visited {
+#hero ul li a:link,
+#hero ul li a:visited {
   grid-area: hero-content;
   color: #0B142B;
   transition: 0.25s;
   display: flex;
 }
-#hero ul li a:link:hover, #hero ul li a:link:active, #hero ul li a:visited:hover, #hero ul li a:visited:active {
+#hero ul li a:link:hover, #hero ul li a:link:active,
+#hero ul li a:visited:hover,
+#hero ul li a:visited:active {
   color: #fff;
   background-color: #0B142B;
 }
-#hero ul li a:link .hero-sub-bottom, #hero ul li a:visited .hero-sub-bottom {
+#hero ul li a:link .hero-sub-bottom,
+#hero ul li a:visited .hero-sub-bottom {
   margin-left: auto;
   display: flex;
   align-items: center;
 }
-#hero ul li a:link .hero-sub-bottom h5, #hero ul li a:visited .hero-sub-bottom h5 {
+#hero ul li a:link .hero-sub-bottom h5,
+#hero ul li a:visited .hero-sub-bottom h5 {
   display: none;
 }
 @media (min-width: 992px) {
-  #hero ul li a:link .hero-sub-bottom h5, #hero ul li a:visited .hero-sub-bottom h5 {
+  #hero ul li a:link .hero-sub-bottom h5,
+#hero ul li a:visited .hero-sub-bottom h5 {
     display: block;
   }
 }

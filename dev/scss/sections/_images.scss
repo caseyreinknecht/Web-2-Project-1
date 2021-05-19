@@ -1,73 +1,73 @@
-#images{
+#images {
 
-   
-    ul{ 
+
+    ul {
         display: grid;
-        grid-template-rows: 360px 486px; 
+        grid-template-rows: 360px 486px;
         grid-area: images-contents;
-        grid-template-areas: "images-1" "images-2" "images-3";
+        grid-template-areas: "images-1""images-2""images-3";
 
-        @include md{
+        @include md {
             grid-template-columns: 50% auto;
             grid-template-rows: 625px;
             grid-template-areas: "images-1 images-2";
         }
 
-        @include lg{ 
+        @include lg {
             grid-template-columns: 60% auto;
-            
+
         }
 
-        @include xl{
+        @include xl {
             grid-template-columns: 65% 35%;
             grid-template-rows: 377px 377px;
-            grid-template-areas: 
-            "images-1, images-2"
-            "images-1, images-3";
+            grid-template-areas:
+                "images-1, images-2"
+                "images-1, images-3";
         }
 
-        li{
+        li {
             background-size: cover;
             background-position: center;
-            
-        } 
 
-        #images-1{
+        }
+
+        #images-1 {
             grid-area: images-1;
-            background-image: url("../img/images/images1.jpg"); 
+            background-image: url("../img/images/images1.jpg");
 
-            @include xl{
+            @include xl {
                 grid-area: images-1;
             }
         }
 
-        #images-2{
+        #images-2 {
             grid-area: images-2;
-            background-image: url("../img/images/images2.jpg"); 
+            background-image: url("../img/images/images2.jpg");
 
-            @include md{
-                background-position: bottom; 
+            @include md {
+                background-position: bottom;
             }
 
-            @include lg{
-                background-position: center; 
+            @include lg {
+                background-position: center;
             }
 
-            @include xl{
+            @include xl {
                 background-position: top;
                 grid-area: images-2;
             }
         }
 
-        #images-3{
+        #images-3 {
             display: none;
-            background-image: url("../img/images/images3.jpg"); 
-           
+            background-image: url("../img/images/images3.jpg");
 
-            @include xl{
+
+            @include xl {
                 display: list-item;
                 grid-area: images-3;
             }
-        } 
+        }
     }
-} 
+}
